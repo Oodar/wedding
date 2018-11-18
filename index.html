@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<title>Hewitson Wedding</title>
+		<link rel="stylesheet" type="text/css" href="/vendor/fullpage.css">
+		<link href="https://fonts.googleapis.com/css?family=Pacifico|Rubik" rel="stylesheet">
+	</head>
+	<style>
+	div {
+		padding: 0;
+		margin: 0;
+		display: block;
+	}
+	body {
+		padding: 0;
+		margin: 0;
+	}
+	#daysRemaining {
+		font-size: 112px;
+		font-family: 'Rubik', sans-serif;
+		font-style: normal;
+    	font-weight: 400;
+	}
+	.countdown {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+	.countdown h2 em {
+		display: block;
+		font-family: 'Pacifico', cursive;
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 400;
+		margin: -40 0 0 0;
+	}
+	</style>
+	<body>
+	<div id="header">
+		
+	</div>
+	<div id="fullpage">
+		<div class="section" id="section0">
+			<div class="countdown">
+				<h2>
+					<span id="daysRemaining"></span>
+					<em>days to go</em>
+				</h2>
+			</div>
+		</div>
+		<div class="section" id="section1">
+		</div>
+		<div class="section" id="section2">
+		</div>
+	</div>
+	<script type="text/javascript" src="vendor/fullpage.js"></script>
+	<script type="text/javascript">
+		var myFullPage = new fullpage('#fullpage', {
+			anchors: ['firstPage', 'secondPage', 'thirdPage'],
+			sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+			navigation: true,
+			navigationPosition: 'right',
+			css3: true,
+			licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
+		});
+	</script>
+	<script type="text/javascript">
+		var end = new Date('04/05/2019 08:00 AM');
+		var _second = 1000;
+		var _minute = _second * 60;
+		var _hour = _minute * 60;
+		var _day = _hour * 24;
+		var timer;
+
+		function showRemaining() {
+				var now = new Date();
+				var distance = end - now;
+				if (distance < 0) {
+
+						clearInterval(timer);
+						document.getElementById('daysRemaining').innerHTML = 'Over!';
+
+						return;
+				}
+				var days = Math.floor(distance / _day);
+				var hours = Math.floor((distance % _day) / _hour);
+				var minutes = Math.floor((distance % _hour) / _minute);
+				var seconds = Math.floor((distance % _minute) / _second);
+
+				document.getElementById('daysRemaining').innerHTML = days + ' ';
+		}
+
+		timer = setInterval(showRemaining, 1000);
+	</script>
+	</body>
+</html>
