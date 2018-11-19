@@ -1,8 +1,10 @@
 <html>
 	<head>
 		<title>Hewitson Wedding</title>
-		<link rel="stylesheet" type="text/css" href="/vendor/fullpage.css">
+		<link rel="stylesheet" type="text/css" href="vendor/fullpage.css">
 		<link href="https://fonts.googleapis.com/css?family=Pacifico|Rubik" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i" rel="stylesheet">
 	</head>
 	<style>
 	div {
@@ -34,6 +36,40 @@
 		font-weight: 400;
 		margin: -40 0 0 0;
 	}
+	.section0-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.section0-wrapper h2 {
+		font-family: 'Libre Baskerville', serif;
+		font-size: 180px;
+		font-weight: 400;
+		font-style: italic;
+	}
+	.head-wrapper {
+		width: 200px;
+		height: 200px;
+		position: relative;
+		overflow: hidden;
+		border-radius: 50%;
+		display: inline-block;
+		box-shadow: rgba(0, 0, 0, 0.8) 0px 0 10px;
+	}
+	.matt {
+		display: inline;
+		margin: 0 auto;
+		margin-left: -10%;
+		height: 100%;
+		width: auto;
+	}
+	.gemma {
+		display: inline;
+		margin: 0 auto;
+		margin-left: -0%;
+		height: 100%;
+		width: auto;
+	}
 	</style>
 	<body>
 	<div id="header">
@@ -41,14 +77,23 @@
 	</div>
 	<div id="fullpage">
 		<div class="section" id="section0">
+			<div class="section0-wrapper">
+				<div class="head-wrapper">
+					<img class="gemma" src="img/gemmahead.png">
+				</div>
+				<h2>&</h2>
+				<div class="head-wrapper">
+					<img class="matt" src="img/matthead.png">
+				</div>
+			</div>
+		</div>
+		<div class="section" id="section1">
 			<div class="countdown">
 				<h2>
 					<span id="daysRemaining"></span>
 					<em>days to go</em>
 				</h2>
 			</div>
-		</div>
-		<div class="section" id="section1">
 		</div>
 		<div class="section" id="section2">
 		</div>
