@@ -199,6 +199,7 @@ h1 span:after {
   justify-content: center;
   padding-inline-start: 0px;
   font-family: 'Source Sans Pro';
+  width: 100%;
 }
 
 
@@ -276,9 +277,15 @@ h1 span:after {
   }
 
   .status:before {
-    left: -8.8%;
+    left: -15px;
     top: 30%;
     transition: all 200ms ease-in;
+  }
+}
+
+@media (min-device-width: 700px) and (max-device-width: 800px) {
+  .status {
+    padding: 0;
   }
 }
 
