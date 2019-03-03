@@ -17,11 +17,11 @@ body {
 .section {
   width: 100%;
   /* background: hsl(0, 0%, 100%); */
-  height: 400px;
+  /* height: 400px; */
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 #section0 {
@@ -188,10 +188,22 @@ h1 span:after {
   border-right: .5em solid transparent;
 }
 
-@media screen and (min-width: 780px){
+#section3, #section4, #section5 {
+  width: 75%;
+  margin: 0 auto;
+}
 
+/*
+@media screen and (min-width: 780px){
+  #section3, #section4, #section5 {
+    width: 50%;
+  }
+}
+*/
+
+@media screen and (min-width: 780px){
   #page {
-      }
+  }
 
   #section1 {
     width: 50%;
